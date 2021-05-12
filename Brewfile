@@ -7,7 +7,6 @@ tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
 brew 'argon2'
-brew 'autojump'
 brew 'bash' # Latest Bash version
 brew 'bat'
 brew 'coreutils' # Those that come with macOS are outdated
