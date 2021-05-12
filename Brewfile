@@ -7,6 +7,7 @@ tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
 brew 'argon2'
+brew 'autojump'
 brew 'bash' # Latest Bash version
 brew 'bat'
 brew 'coreutils' # Those that come with macOS are outdated
@@ -100,7 +101,7 @@ cask 'qlmarkdown'
 cask 'quicklook-json'
 
 # Fonts
-cask 'font-jetbrainsmono-nerd-font'
+cask 'font-jetbrains-mono-nerd-font'
 cask 'font-fira-code'
 cask 'font-proza-libre'
 
