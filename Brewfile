@@ -20,6 +20,7 @@ brew 'hub'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'prettyping'
 brew 'restic'
 brew 'speedtest-cli'
 brew 'syncthing'
