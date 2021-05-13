@@ -6,6 +6,22 @@ alias cpwd='pwd|tr -d "\n"|pbcopy'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
+o() {
+    if [ $# -eq 0 ]; then
+        open .;
+    else
+        open "$@";
+    fi;
+}
+
+vs() {
+    if [ $# -eq 0 ]; then
+        code .;
+    else
+        code "$@";
+    fi;
+}
+
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
