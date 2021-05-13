@@ -37,6 +37,10 @@ $HOME/.composer/vendor/bin/valet install
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/BeepBoop
+mkdir $HOME/.vim
+mkdir $HOME/.vim/backups
+mkdir $HOME/.vim/swaps
+mkdir $HOME/.vim/undo
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
