@@ -46,6 +46,10 @@ mkdir $HOME/.vim/undo
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+# Add global gitignore
+ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
+git config --global core.excludesfile $HOME/.gitignore_global
+
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 ln -s $HOME/.dotfiles/.mackup $HOME/.mackup
