@@ -231,8 +231,8 @@ sudo pmset -a hibernatemode 0
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
-# defaults write com.apple.screensaver askForPassword -int 1
-# defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 2
 
 # Re-enable subpixel antialiasing
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
@@ -462,7 +462,7 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 defaults write com.apple.dock wvous-tr-corner -int 12
 defaults write com.apple.dock wvous-tr-modifier -int 1048576
 # Bottom left screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 13
+defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 ###############################################################################
