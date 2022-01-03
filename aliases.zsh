@@ -27,6 +27,24 @@ cdf() { # short for `cdfinder`
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
+# php test functions
+# https://freek.dev/2142-a-bash-function-to-run-tests-for-both-phpunit-and-pest
+function p() {
+    if [ -f vendor/bin/pest ]; then
+        vendor/bin/pest "$@"
+    else
+        vendor/bin/phpunit "$@"
+    fi
+}
+
+function pf() {
+    if [ -f vendor/bin/pest ]; then
+        vendor/bin/pest --filter "$@"
+    else
+        vendor/bin/phpunit --filter "$@"
+    fi
+}
+
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; composer global update;'
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
