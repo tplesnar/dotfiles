@@ -1,0 +1,36 @@
+<!--
+  Put this file in ~/Library/LaunchAgents/com.tplesnar.KeyRemapping.plist to
+  automatically remap your keys when macOS starts.
+  See https://developer.apple.com/library/archive/technotes/tn2450/_index.html for
+  the key "usage IDs". Take the usage ID and add 0x700000000 to it before putting it
+  into a source or destination (HIDKeyboardModifierMappingSrc and
+  HIDKeyboardModifierMappingDst respectively).
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.KeyRemapping</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/hidutil</string>
+        <string>property</string>
+        <string>--set</string>
+
+        <!--
+        Remap 
+          'Keyboard Right Control' (0xE4) to 
+          'Keyboard Right Alt' (0xE6)
+        -->
+        <string>{"UserKeyMapping":[
+          {
+            "HIDKeyboardModifierMappingSrc": 0x7000000E4,
+            "HIDKeyboardModifierMappingDst": 0x7000000E6
+          }
+        ]}</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
