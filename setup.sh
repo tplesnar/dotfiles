@@ -35,13 +35,14 @@ pecl install imagick memcached redis
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-# Create a Sites directory
-# This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/BeepBoop
+
 mkdir $HOME/.vim
 mkdir $HOME/.vim/backups
 mkdir $HOME/.vim/swaps
 mkdir $HOME/.vim/undo
+
+ln -s $HOME/.dotfiles/warp $HOME/.warp
 
 touch $HOME/.hushlogin
 
