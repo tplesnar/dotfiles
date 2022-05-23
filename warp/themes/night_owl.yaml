@@ -2,10 +2,6 @@
 background: "#011627" # Accent color for UI elements
 accent: "#6a44a5" # Terminal background color
 foreground: "#d6deeb" # The foreground color.
-# background_image:
-  # background image credit: https://unsplash.com/photos/tQk3y00flv4
-  # path: warp_bundled/koi_bg.jpg
-  # opacity: 30
 details: darker # Whether the theme is lighter or darker.
 terminal_colors:
   normal:
@@ -22,14 +18,14 @@ terminal_colors:
     # blue: "#4373c2"
     magenta: "#da70d6"
     # magenta: "#c792ea"
-    # cyan: "#3e5f9f" #
-    cyan: "#7fdbca" #
+    # cyan: "#3e5f9f"
+    cyan: "#7fdbca"
     white: "#5f7e97"
   bright:
     black: "#575656"
     red: "#d3423e"
     # red: "#e53036"
-    green: "#68c569"
+    green: "#22da6e"
     # green: "#c5e478"
     # yellow: "#ffd700"
     # yellow: "#faf39f"
