@@ -93,6 +93,7 @@ cask 'tidal'
 cask 'transmission'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'warp'
 
 
 # Quicklook
