@@ -95,7 +95,6 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'warp'
 
-
 # Quicklook
 cask 'qlmarkdown'
 cask 'quicklook-json'
@@ -108,7 +107,6 @@ cask 'font-jetbrains-mono-nerd-font'
 cask 'font-fira-code'
 cask 'font-proza-libre'
 
-
 # Mac App Store
 mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Pixelmator Pro', id: 1289583905
@@ -119,3 +117,4 @@ mas 'Gestimer', id: 990588172
 mas 'Parcel', id: 639968404
 mas 'Deliveries', id: 290986013
 mas 'Things', id: 904280696
+mas 'Gestimer', id: 990588172
