@@ -45,7 +45,7 @@ brew 'redis'
 brew 'yarn'
 
 # Apps
-cask '1password7'
+cask '1password'
 cask 'appcleaner'
 cask 'atom'
 cask 'brave-browser'
