@@ -45,9 +45,8 @@ brew 'redis'
 brew 'yarn'
 
 # Apps
-cask '1password7'
+cask '1password'
 cask 'appcleaner'
-cask 'atom'
 cask 'brave-browser'
 # cask 'caldigit-docking-utility'
 cask 'calibre'
@@ -95,9 +94,6 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'warp'
 
-# Quicklook
-cask 'qlmarkdown'
-cask 'quicklook-json'
 
 # Fonts
 cask 'font-lato'
@@ -108,13 +104,14 @@ cask 'font-fira-code'
 cask 'font-proza-libre'
 
 # Mac App Store
-mas 'Paprika Recipe Manager 3', id: 1303222628
-mas 'Pixelmator Pro', id: 1289583905
-mas 'Disk Speed Test', id: 425264550
+mas '1Blocker', id: 1365531024
 mas 'Amphetamine', id: 937984704
 mas 'Bear', id: 1091189122
-mas 'Gestimer', id: 990588172
-mas 'Parcel', id: 639968404
 mas 'Deliveries', id: 290986013
+mas 'Disk Speed Test', id: 425264550
+mas 'iPreview', id: 1519213509
+mas 'Paprika Recipe Manager 3', id: 1303222628
+mas 'Parcel', id: 639968404
+mas 'Pixelmator Pro', id: 1289583905
 mas 'Things', id: 904280696
-mas 'Gestimer', id: 990588172
+# mas 'Gestimer', id: 990588172
