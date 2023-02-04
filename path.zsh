@@ -16,3 +16,8 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 #Homebrew's "sbin"
 export PATH="/usr/local/sbin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/thierry/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
