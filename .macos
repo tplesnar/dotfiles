@@ -704,6 +704,9 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Auto-play videos when opened with QuickTime Player
 # defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
+# Disable "Disk not ejected properly warning"
+defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES
+
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
