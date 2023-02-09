@@ -104,7 +104,6 @@ cask 'font-proza-libre'
 mas '1Blocker', id: 1365531024
 mas 'Amphetamine', id: 937984704
 mas 'Bear', id: 1091189122
-mas 'Deliveries', id: 290986013
 mas 'Disk Speed Test', id: 425264550
 mas 'iPreview', id: 1519213509
 mas 'Paprika Recipe Manager 3', id: 1303222628
