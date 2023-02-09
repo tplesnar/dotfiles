@@ -12,10 +12,10 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 # ls -> gls
 # export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 
 #Homebrew's "sbin"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="/Users/thierry/Library/pnpm"

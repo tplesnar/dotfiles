@@ -66,7 +66,7 @@ alias tinker="php artisan tinker"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+alias composer="php -d memory_limit=-1 $(brew --prefix)/bin/composer"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
