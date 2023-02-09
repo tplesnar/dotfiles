@@ -14,9 +14,6 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 
-#Homebrew's "sbin"
-export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
-
 # pnpm
 export PNPM_HOME="/Users/thierry/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
