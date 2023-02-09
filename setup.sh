@@ -55,6 +55,7 @@ touch $HOME/.hushlogin
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
 # Add global gitignore
 ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
