@@ -3,8 +3,8 @@
 echo "Setting up your Mac..."
 
 # Configure DNS
-networksetup -setdnsservers Wi-Fi 80.67.169.12 80.67.169.40 2001:910:800::12 2001:910:800::40 208.67.222.222 208.67.220.220
-networksetup -setdnsservers ethernet 80.67.169.12 80.67.169.40 2001:910:800::12 2001:910:800::40 208.67.222.222 208.67.220.220
+# networksetup -setdnsservers Wi-Fi 80.67.169.12 80.67.169.40 2001:910:800::12 2001:910:800::40 208.67.222.222 208.67.220.220
+# networksetup -setdnsservers ethernet 80.67.169.12 80.67.169.40 2001:910:800::12 2001:910:800::40 208.67.222.222 208.67.220.220
 
 # Check for Oh My Zsh and install if we don't have it
 if test ! $(which omz); then
