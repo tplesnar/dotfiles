@@ -5,6 +5,10 @@
   the key "usage IDs". Take the usage ID and add 0x700000000 to it before putting it
   into a source or destination (HIDKeyboardModifierMappingSrc and
   HIDKeyboardModifierMappingDst respectively).
+
+  ================================================================
+  --*-- hidutil key remapping generator for MacOS --*--
+  https://hidutil-generator.netlify.app/
 -->
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
