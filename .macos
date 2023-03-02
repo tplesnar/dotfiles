@@ -685,7 +685,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
 # Disable "Disk not ejected properly warning"
-defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES
 
 ###############################################################################
 # Mac App Store                                                               #
@@ -757,6 +757,8 @@ defaults write org.m0k.transmission RandomPort -bool true
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
+
+pkill diskarbitrationd
 
 for app in "Activity Monitor" \
 	"cfprefsd" \
