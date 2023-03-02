@@ -320,7 +320,12 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Disable SMB v1
 # https://support.apple.com/fr-fr/HT211927
-sudo printf "[default]\nprotocol_vers_map=6\n" > /etc/nsmb.conf
+
+RESOLV_CONF_FILE=/etc/nsmb.conf
+
+if [[ ! -f "$RESOLV_CONF_FILE" ]]; then
+  echo -e "[default]\nprotocol_vers_map=6\n" | sudo tee "$RESOLV_CONF_FILE" > /dev/null
+fi 
 
 # Disable disk image verification
 # defaults write com.apple.frameworks.diskimages skip-verify -bool true
