@@ -758,7 +758,7 @@ defaults write org.m0k.transmission RandomPort -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-pkill diskarbitrationd
+sudo pkill diskarbitrationd
 
 for app in "Activity Monitor" \
 	"cfprefsd" \
