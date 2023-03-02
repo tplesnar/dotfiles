@@ -190,6 +190,8 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
+# known bug -> Error:-99 File:/AppleInternal/Library/.../Sources/Admin/InternetServices.m Line:379
+# https://www.reddit.com/r/macsysadmin/comments/vy1ecd/systemsetup_throws_error99_with_timezones/
 sudo systemsetup -settimezone "Europe/Stockholm" > /dev/null
 
 ###############################################################################
