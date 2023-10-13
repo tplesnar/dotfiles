@@ -64,8 +64,7 @@ alias fresh="php artisan migrate:fresh --seed"
 alias seed="php artisan db:seed"
 alias tinker="php artisan tinker"
 alias larastan="vendor/bin/phpstan analyse"
-alias pest="php artisan test"
-alias pestp="php artisan test --parallel"
+alias pp="php artisan test --parallel"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
