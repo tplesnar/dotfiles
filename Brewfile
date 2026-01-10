@@ -11,6 +11,7 @@ brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'curl'
+brew 'fnm'
 brew 'gh'
 brew 'git'
 brew 'grep'

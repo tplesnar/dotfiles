@@ -128,3 +128,5 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 
 ##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
 fi
+
+eval "$(fnm env --use-on-cd)"
