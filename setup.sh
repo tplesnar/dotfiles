@@ -61,10 +61,6 @@ ln -s $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
 git config --global core.excludesfile $HOME/.gitignore_global
 
-# Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
-ln -s $HOME/.dotfiles/.mackup $HOME/.mackup
-
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
