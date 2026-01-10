@@ -86,7 +86,6 @@ cask 'thingsmacsandboxhelper'
 # cask 'transmission'
 cask 'visual-studio-code'
 cask 'vlc'
-# cask 'warp'
 
 
 # Fonts
