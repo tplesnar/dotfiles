@@ -31,9 +31,9 @@ mkdir -p $HOME/BeepBoop
 mkdir -p $HOME/.vim/{backups,swaps,undo}
 
 # Symlinks
-ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
-ln -sf $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
-ln -sf $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
+ln -sf "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
+ln -sf "$HOME/.dotfiles/.p10k.zsh" "$HOME/.p10k.zsh"
+ln -sf "$HOME/.dotfiles/.gitignore_global" "$HOME/.gitignore_global"
 git config --global core.excludesfile $HOME/.gitignore_global
 
 # Silence login message
