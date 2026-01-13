@@ -32,22 +32,21 @@ After going to our checklist above and making sure you backed everything up, we'
 If you did all of the above you may now follow these install instructions to setup a new Mac.
 
 1. Update macOS to the latest version with the App Store
-2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
+2. Clone this repo to `~/.dotfiles`:
 
-   ```zsh
-   curl https://raw.githubusercontent.com/tplesnar/dotfiles/main/ssh.sh | sh -s "<your-email-address>"
-   ```
-
-3. Clone this repo to `~/.dotfiles` with:
-
-   ```zsh
-   git clone git@github.com:tplesnar/dotfiles.git ~/.dotfiles
-   cd ~/.dotfiles
-   git submodule update --init --recursive
-   ```
+    ```zsh
+    git clone https://github.com/tplesnar/dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles
+    git submodule update --init --recursive
+    ```
 
 4. Run `setup.sh` in `~/.dotfiles/` to start the installation
-5. Restart your computer to finalize the process
+5. Set up 1Password SSH agent, then switch to SSH:
+```zsh
+   cd ~/.dotfiles
+   git remote set-url origin git@github.com:tplesnar/dotfiles.git
+```
+6. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
