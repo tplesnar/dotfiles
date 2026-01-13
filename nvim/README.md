@@ -1,102 +1,83 @@
-# Neovim Configuration (Omakub-inspired)
+# LazyVim Configuration
 
-This Neovim configuration is based on [Omakub](https://github.com/basecamp/omakub) by DHH/Basecamp - an opinionated Ubuntu setup with a beautifully configured LazyVim.
+This is the official [LazyVim](https://www.lazyvim.org/) starter template.
 
-## What's Included
+## What is LazyVim?
 
-This is a **LazyVim** configuration with Omakub's specific customizations:
+LazyVim is a Neovim setup powered by [💤 lazy.nvim](https://github.com/folke/lazy.nvim) to make it easy to customize and extend your config.
 
-- ✅ **Tokyo Night** color scheme
-- ✅ **Transparent background** (terminal background shows through)
-- ✅ **No animated scrolling** (snappier feel)
-- ✅ **Absolute line numbers** (no relative numbering)
-- ✅ **Neo-tree** file explorer by default
-- ✅ **Full LSP support** (language servers, completion, diagnostics)
-- ✅ **Treesitter** syntax highlighting
-- ✅ **Telescope** fuzzy finder
-- ✅ **Git integration** (LazyGit, Gitsigns)
+## Installation
+
+The `setup.sh` script automatically symlinks this directory to `~/.config/nvim`.
+
+On first launch of `nvim`, LazyVim will:
+1. Bootstrap the lazy.nvim plugin manager
+2. Download and install all plugins
+3. Set up language servers (LSP)
+
+**First launch takes 1-2 minutes** - be patient!
 
 ## Structure
 
 ```
 nvim/
-├── init.lua                                  # Entry point
-├── lazyvim.json                              # LazyVim config (enables neo-tree)
+├── init.lua              # Entry point - bootstraps LazyVim
 ├── lua/
 │   ├── config/
-│   │   ├── autocmds.lua                     # Auto-commands
-│   │   ├── keymaps.lua                      # Key mappings
-│   │   ├── lazy.lua                         # Plugin manager bootstrap
-│   │   └── options.lua                      # Vim options (relative numbers off)
+│   │   ├── autocmds.lua # Custom auto-commands
+│   │   ├── keymaps.lua  # Custom key mappings
+│   │   ├── lazy.lua     # Plugin manager configuration
+│   │   └── options.lua  # Vim options
 │   └── plugins/
-│       ├── theme.lua                        # Tokyo Night theme
-│       └── snacks-animated-scrolling-off.lua # Disable scroll animations
-└── plugin/
-    └── after/
-        └── transparency.lua                  # Terminal transparency
+│       └── example.lua  # Example plugin configurations (disabled by default)
+├── .gitignore           # Git ignore patterns
+├── .neoconf.json        # Neovim/LSP configuration
+└── stylua.toml          # Lua formatter config
 ```
 
-## First Launch
+## Key Bindings
 
-When you first run `nvim`:
-1. Lazy.nvim plugin manager bootstraps automatically
-2. LazyVim and all plugins download (~1-2 minutes)
-3. Language servers install automatically
-4. Everything "just works" ™️
+LazyVim uses `<Space>` as the leader key.
 
-**Be patient during first launch!**
+### Essential Commands
 
-## Key Bindings (Leader = Space)
+| Keys | Action |
+|------|--------|
+| `<Space>` | Show which-key menu |
+| `<Space>ff` | Find files |
+| `<Space>sg` | Search text (grep) |
+| `<Space>e` | File explorer |
+| `<Space>qq` | Quit all |
 
-### Essential LazyVim Commands
+### Code Navigation
 
-- `<Space>ff` - Find files (Telescope)
-- `<Space>fg` - Live grep (search in all files)
-- `<Space>e` - Toggle Neo-tree file explorer
-- `<Space>gg` - Open LazyGit
-- `<Space>qq` - Quit all
-
-### Navigation
-
-- `gd` - Go to definition
-- `gr` - Find references
-- `K` - Hover documentation
-- `<Space>ca` - Code actions
-- `<Space>rn` - Rename symbol
+| Keys | Action |
+|------|--------|
+| `gd` | Go to definition |
+| `gr` | Find references |
+| `K` | Hover documentation |
+| `<Space>ca` | Code actions |
+| `<Space>cr` | Rename symbol |
 
 ### Editing
 
-- `gcc` - Comment/uncomment line
-- `gc` (visual) - Comment/uncomment selection
-- `<C-/>` - Toggle terminal
+| Keys | Action |
+|------|--------|
+| `gcc` | Comment/uncomment line |
+| `gc` (visual) | Comment selection |
+| `<C-/>` | Toggle terminal |
 
-### Window Management
-
-- `<C-h/j/k/l>` - Navigate between splits
-- `<C-Up/Down/Left/Right>` - Resize splits
+**Full keymaps**: Run `:help LazyVim` or visit [LazyVim Keymaps](https://www.lazyvim.org/keymaps)
 
 ## Customization
 
-### Disable Transparency
+### Adding Plugins
 
-If you don't want a transparent background, delete:
-```bash
-rm ~/.dotfiles/nvim/plugin/after/transparency.lua
-```
+Create a new file in `lua/plugins/` (e.g., `lua/plugins/my-plugins.lua`):
 
-### Change Theme
-
-Edit `lua/plugins/theme.lua`:
 ```lua
-colorscheme = "catppuccin"  -- or "gruvbox", "nord", etc.
-```
-
-### Add Plugins
-
-Create a new file in `lua/plugins/`:
-```lua
--- lua/plugins/my-plugin.lua
 return {
+  -- Add a plugin
   {
     "username/plugin-name",
     event = "VeryLazy",
@@ -105,24 +86,63 @@ return {
 }
 ```
 
-### Enable Relative Line Numbers
+### Changing Theme
 
-Remove or comment out in `lua/config/options.lua`:
+Create `lua/plugins/colorscheme.lua`:
+
 ```lua
--- vim.opt.relativenumber = false
+return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin", -- or "gruvbox", "nord", etc.
+    },
+  },
+}
+```
+
+### Custom Options
+
+Edit `lua/config/options.lua`:
+
+```lua
+vim.opt.relativenumber = false  -- Disable relative line numbers
+vim.opt.wrap = true            -- Enable line wrapping
+```
+
+### Custom Keymaps
+
+Edit `lua/config/keymaps.lua`:
+
+```lua
+local map = vim.keymap.set
+
+map("n", "<C-s>", ":w<CR>", { desc = "Save file" })
 ```
 
 ## Health Check
 
-Run `:checkhealth` in Neovim to verify everything works.
+After first launch, run `:LazyHealth` to verify everything works correctly.
 
 ## Learn More
 
 - [LazyVim Documentation](https://www.lazyvim.org/)
-- [LazyVim Keymaps](https://www.lazyvim.org/keymaps)
-- [Omakub Project](https://github.com/basecamp/omakub)
-- [The Omarchy Manual](https://learn.omacom.io/2/the-omarchy-manual)
+- [LazyVim GitHub](https://github.com/LazyVim/LazyVim)
+- [Starter Template](https://github.com/LazyVim/starter)
+- [Available Extras](https://www.lazyvim.org/extras)
+
+## Troubleshooting
+
+### Plugins not loading
+Run `:Lazy sync` to reinstall all plugins.
+
+### LSP not working
+Run `:Mason` to manage language servers.
+
+### Config issues
+Run `:LazyHealth` to diagnose problems.
 
 ## Credits
 
-Configuration inspired by [Omakub](https://github.com/basecamp/omakub) - DHH's opinionated Ubuntu setup.
+- [LazyVim](https://github.com/LazyVim/LazyVim) by [folke](https://github.com/folke)
+- [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager

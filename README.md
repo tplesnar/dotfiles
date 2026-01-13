@@ -67,25 +67,24 @@ cd ~/.dotfiles
 
 This script downloads and installs the offline version plus the certificate patch.
 
-#### Neovim (Omakub-inspired)
+#### Neovim with LazyVim
 
-The setup configures Neovim with an [Omakub](https://github.com/basecamp/omakub)-inspired LazyVim configuration - DHH's opinionated Neovim setup featuring:
+The setup uses the official [LazyVim](https://www.lazyvim.org/) starter template - a modern Neovim configuration that provides:
 
-- ✅ **Tokyo Night** theme with transparent background
-- ✅ **LazyVim** - modern plugin distribution
-- ✅ **Neo-tree** file explorer
-- ✅ **LSP, Treesitter, Telescope** - full IDE features
-- ✅ **No animated scrolling** - snappier feel
-- ✅ **Absolute line numbers** (not relative)
+- ✅ **Out-of-the-box IDE features** - LSP, Treesitter, Telescope, Git integration
+- ✅ **Lazy-loaded plugins** - fast startup time
+- ✅ **Extensible** - easy to customize and add plugins
+- ✅ **Well-documented** - extensive help and community support
+- ✅ **Auto-install** - everything sets up automatically
 
 **First launch**:
 ```zsh
 nvim
 ```
 
-Wait for plugins to auto-install (~1-2 minutes). Everything "just works" ™️
+Plugins auto-install on first run (~1-2 minutes). Run `:LazyHealth` after to verify.
 
-**Learn more**: See `~/.dotfiles/nvim/README.md` or [Omakub project](https://github.com/basecamp/omakub)
+**Learn more**: See `~/.dotfiles/nvim/README.md` or [LazyVim docs](https://www.lazyvim.org/)
 
 ## Your Own Dotfiles
 
