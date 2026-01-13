@@ -52,6 +52,21 @@ Your Mac is now ready to use!
 
 > Note: you can use a different location than `~/.dotfiles` if you want. Just make sure you also update the reference in the [`.zshrc`](./.zshrc#L2) file.
 
+### Optional Software
+
+Some software requires manual installation or special handling:
+
+#### Logitech Options+
+
+If you use Logitech peripherals, install the offline version of Options+ (no telemetry, works without internet):
+
+```zsh
+cd ~/.dotfiles
+./install-logitech-options.sh
+```
+
+This script downloads and installs the offline version plus the certificate patch.
+
 ## Your Own Dotfiles
 
 **Please note that the instructions below assume you already have set up Oh My Zsh so make sure to first [install Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started) before you continue.**

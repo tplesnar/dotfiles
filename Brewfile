@@ -40,6 +40,7 @@ brew 'zsh-autosuggestions'
 # brew 'yarn'
 
 # Apps
+# Note: Logitech Options+ installed via ./install-logitech-options.sh (offline version preferred)
 cask '1password'
 brew '1password-cli'
 cask 'aldente'
