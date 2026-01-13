@@ -1,5 +1,4 @@
 # Binaries
-brew 'argon2'
 brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'coreutils' # Those that come with macOS are outdated
@@ -11,13 +10,15 @@ brew 'grep'
 brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mas' # Mac App Store manager
+brew 'neovim'
+brew 'powerlevel10k'
 # brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'prettyping'
 brew 'restic'
 brew 'speedtest-cli'
 # brew 'syncthing'
 brew 'tree' # List directories in a tree structure
-brew 'neovim'
+brew 'zsh-autosuggestions'
 
 # Spatie Medialibrary
 # brew 'jpegoptim'
@@ -28,12 +29,14 @@ brew 'neovim'
 
 # Development
 # brew 'php'
+# brew 'argon2'
 # brew 'composer'
 # brew 'imagemagick'
 # brew 'meilisearch'
 # brew 'mysql'
 # brew 'nginx'
 # brew 'node'
+# brew 'pnpm'
 # brew 'redis'
 # brew 'yarn'
 
@@ -52,6 +55,7 @@ cask 'contraste'
 cask 'firefox'
 cask 'firefox-developer-edition'
 # cask 'flux'
+cask 'ghostty'
 cask 'github'
 cask 'google-chrome'
 cask 'grandperspective'
@@ -84,32 +88,25 @@ cask 'tempbox'
 cask 'thingsmacsandboxhelper'
 # cask 'tidal'
 # cask 'transmission'
+cask 'utm'
 cask 'visual-studio-code'
 cask 'vlc'
 
-
 # Fonts
-# cask 'font-lato'
-# cask 'font-open-sans'
-# cask 'font-roboto'
-cask 'font-jetbrains-mono-nerd-font'
-cask 'font-monaspace-nf'
 cask 'font-iosevka'
 cask 'font-iosevka-term-nerd-font'
-# cask 'font-fira-code'
-# cask 'font-proza-libre'
+cask 'font-jetbrains-mono-nerd-font'
+cask 'font-monaspace-nf'
 
 # Mac App Store
-# mas '1Blocker', id: 1365531024
 mas 'Amphetamine', id: 937984704
-# mas 'Bear', id: 1091189122
 mas 'Dato', id: 1470584107
 mas 'Disk Speed Test', id: 425264550
 mas 'Endel', id: 1346247457
 mas 'Instapaper', id: 288545208
 mas 'iPreview', id: 1519213509
+mas 'NextDNS', id: 1464122853
 # mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Parcel', id: 639968404
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Things', id: 904280696
-# mas 'Gestimer', id: 990588172
