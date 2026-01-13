@@ -46,7 +46,18 @@ If you did all of the above you may now follow these install instructions to set
    cd ~/.dotfiles
    git remote set-url origin git@github.com:tplesnar/dotfiles.git
 ```
-6. Restart your computer to finalize the process
+6. Logitech Options+
+ 
+If you use Logitech peripherals, install the offline version of Options+ (no telemetry, works without internet):
+ 
+```zsh
+cd ~/.dotfiles
+./install-logitech-options.sh
+```
+ 
+This script downloads and installs the offline version plus the certificate patch.
+
+7. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
