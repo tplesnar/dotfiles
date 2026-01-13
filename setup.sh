@@ -36,6 +36,10 @@ ln -sf "$HOME/.dotfiles/.p10k.zsh" "$HOME/.p10k.zsh"
 ln -sf "$HOME/.dotfiles/.gitignore_global" "$HOME/.gitignore_global"
 git config --global core.excludesfile "$HOME/.gitignore_global"
 
+# Neovim LazyVim config
+mkdir -p "$HOME/.config"
+ln -sf "$HOME/.dotfiles/nvim" "$HOME/.config/nvim"
+
 # Silence login message
 touch $HOME/.hushlogin
 

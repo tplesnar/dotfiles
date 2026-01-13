@@ -67,6 +67,27 @@ cd ~/.dotfiles
 
 This script downloads and installs the offline version plus the certificate patch.
 
+#### Neovim with LazyVim
+
+The setup automatically configures Neovim with [LazyVim](https://www.lazyvim.org/), a modern Neovim configuration. On first launch, Neovim will automatically download and install all plugins.
+
+**First launch**:
+```zsh
+nvim
+```
+
+Wait for plugins to install (this happens automatically). Once complete, you'll have:
+- ✅ LSP support (language servers)
+- ✅ Treesitter syntax highlighting
+- ✅ Telescope fuzzy finder
+- ✅ File explorer
+- ✅ Git integration
+- ✅ And much more!
+
+**Customize**: Edit `~/.dotfiles/nvim/lua/plugins/` to add or modify plugins.
+
+**Learn more**: See [LazyVim documentation](https://www.lazyvim.org/)
+
 ## Your Own Dotfiles
 
 **Please note that the instructions below assume you already have set up Oh My Zsh so make sure to first [install Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started) before you continue.**
