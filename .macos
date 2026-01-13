@@ -84,6 +84,18 @@ echo "About to use sysadminctl to configure screen. Password needed."
 sysadminctl -screenLock 5 -password -
 
 # Enable sudo with Touch ID (persists after macOS updates)
+# First, create sudo_local.default if it doesn't exist
+if [[ ! -f /etc/pam.d/sudo_local.default ]]; then
+  sudo tee /etc/pam.d/sudo_local.default << 'EOF'
+# Standard sudo authentication fallback
+auth       sufficient     pam_smartcard.so
+auth       required       pam_opendirectory.so
+account    required       pam_permit.so
+password   required       pam_deny.so
+session    required       pam_permit.so
+EOF
+fi
+# Now create sudo_local with Touch ID that includes the default
 sudo tee /etc/pam.d/sudo_local << 'EOF'
 auth       sufficient     pam_tid.so
 auth       sufficient     pam_watchid.so
