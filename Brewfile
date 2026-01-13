@@ -16,7 +16,6 @@ brew 'powerlevel10k'
 brew 'prettyping'
 brew 'restic'
 brew 'speedtest-cli'
-# brew 'syncthing'
 brew 'tree' # List directories in a tree structure
 brew 'zsh-autosuggestions'
 
