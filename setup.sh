@@ -34,6 +34,7 @@ mkdir -p $HOME/.vim/{backups,swaps,undo}
 ln -sf "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.dotfiles/.p10k.zsh" "$HOME/.p10k.zsh"
 ln -sf "$HOME/.dotfiles/.gitignore_global" "$HOME/.gitignore_global"
+ln -sf "$HOME/.dotfiles/nvim" "$HOME/.config/nvim"
 git config --global core.excludesfile "$HOME/.gitignore_global"
 
 # Silence login message
