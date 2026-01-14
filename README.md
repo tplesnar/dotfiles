@@ -32,7 +32,8 @@ After going to our checklist above and making sure you backed everything up, we'
 If you did all of the above you may now follow these install instructions to setup a new Mac.
 
 1. Update macOS to the latest version with the App Store
-2. Clone this repo to `~/.dotfiles`:
+2. Install the command-line tools `xcode-select --install`, there might be a popup to click...
+3. Clone this repo to `~/.dotfiles`:
 
     ```zsh
     git clone https://github.com/tplesnar/dotfiles.git ~/.dotfiles
