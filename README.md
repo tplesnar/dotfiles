@@ -49,14 +49,7 @@ If you did all of the above you may now follow these install instructions to set
 ```
 6. Logitech Options+
  
-If you use Logitech peripherals, install the offline version of Options+ (no telemetry, works without internet):
- 
-```zsh
-cd ~/.dotfiles
-./install-logitech-options.sh
-```
- 
-This script downloads and installs the offline version plus the certificate patch.
+If you use Logitech peripherals, install the offline version of Options+ (no telemetry, works without internet) using  [this file](https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_offline.zip) it should be the latest version, you can check it using the [release notes](https://support.logi.com/hc/en-us/articles/1500005516462-Logi-Options-Release-Notes)
 
 7. Safari settings require to double click on `SafariSaneDefault.mobileconfig` to add them to (at the time of writing) "System Settings > General > Device Management" where it can be activated.
 
