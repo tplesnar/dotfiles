@@ -42,7 +42,31 @@ function pf() {
 }
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm install npm -g; sudo npm update -g; composer global update;'
+update() {
+  echo "🍎 Updating macOS..."
+  sudo softwareupdate -i -a
+
+  echo "\n🍺 Updating Homebrew..."
+  brew update && brew upgrade && brew cleanup
+
+  echo "\n📦 Updating Mac App Store apps..."
+  if command -v mas &> /dev/null; then
+    mas upgrade
+  fi
+
+  echo "\n📦 Updating npm packages..."
+  if command -v npm &> /dev/null; then
+    npm install -g npm      # No sudo!
+    npm update -g
+  fi
+
+  if command -v composer &> /dev/null; then
+    echo "\n🎼 Updating Composer packages..."
+    composer global update
+  fi
+
+  echo "\n✅ All updates complete!"
+}
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
