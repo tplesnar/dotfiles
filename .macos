@@ -113,23 +113,15 @@ echo "About to use sysadminctl to configure screen. Password needed."
 sysadminctl -screenLock 5 -password -
 
 # Enable sudo with Touch ID (persists after macOS updates)
-# First, create sudo_local.default if it doesn't exist
-if [[ ! -f /etc/pam.d/sudo_local.default ]]; then
-  sudo tee /etc/pam.d/sudo_local.default << 'EOF'
-# Standard sudo authentication fallback
-auth       sufficient     pam_smartcard.so
-auth       required       pam_opendirectory.so
-account    required       pam_permit.so
-password   required       pam_deny.so
-session    required       pam_permit.so
-EOF
+# Copy the system template as a starting point
+if [[ ! -f /etc/pam.d/sudo_local ]]; then
+  sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
 fi
-# Now create sudo_local with Touch ID that includes the default
-sudo tee /etc/pam.d/sudo_local << 'EOF'
-auth       sufficient     pam_tid.so
-auth       sufficient     pam_watchid.so
-auth       include        sudo_local.default
-EOF
+
+# Remove comment on Touch ID line if present
+if grep -qE '^[[:space:]]*#[[:space:]]*auth[[:space:]]+sufficient[[:space:]]+pam_tid\.so' /etc/pam.d/sudo_local; then
+  sed -i '' 's/^[[:space:]]*#[[:space:]]*\(auth[[:space:]]*sufficient[[:space:]]*pam_tid\.so[[:space:]]*\)$/\1/' /etc/pam.d/sudo_local
+fi
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
