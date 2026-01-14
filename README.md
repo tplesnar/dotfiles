@@ -58,7 +58,11 @@ cd ~/.dotfiles
  
 This script downloads and installs the offline version plus the certificate patch.
 
-7. Restart your computer to finalize the process
+7. Safari settings require to double click on `SafariSaneDefault.mobileconfig` to add them to (at the time of writing) "System Settings > General > Device Management" where it can be activated.
+
+In case those settings needs to be reverted, the mobileconfig file needs to be updated with for example the application "iMazing Profile Editor" installed with brew from MAS, deleted from System Settings before being applied again.
+
+8. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 

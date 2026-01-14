@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutoFillFromAddressBook</key>
+			<false/>
+			<key>AutoFillMiscellaneousForms</key>
+			<false/>
+			<key>AutoOpenSafeDownloads</key>
+			<false/>
+			<key>CanPromptForPushNotifications</key>
+			<false/>
+			<key>HistoryAgeInDaysLimit</key>
+			<integer>365000</integer>
+			<key>IncludeDevelopMenu</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Safari</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.Safari.A46B47D4-8D5B-4F33-8C27-E2E2FA7A34DA</string>
+			<key>PayloadType</key>
+			<string>com.apple.Safari</string>
+			<key>PayloadUUID</key>
+			<string>A46B47D4-8D5B-4F33-8C27-E2E2FA7A34DA</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ShowFullURLInSmartSearchField</key>
+			<true/>
+			<key>ShowOverlayStatusBar</key>
+			<true/>
+			<key>WarnAboutFraudulentWebsites</key>
+			<true/>
+			<key>com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks</key>
+			<true/>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>SafariSaneDefault</string>
+	<key>PayloadIdentifier</key>
+	<string>iMazing-Profile-Editor.217F1F06-4F8D-4432-BEE9-C09D45D4393A</string>
+	<key>PayloadOrganization</key>
+	<string>tplesnar</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>217F1F06-4F8D-4432-BEE9-C09D45D4393A</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>TargetDeviceType</key>
+	<integer>5</integer>
+</dict>
+</plist>

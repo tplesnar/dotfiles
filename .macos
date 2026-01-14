@@ -268,63 +268,6 @@ defaults write com.apple.dock wvous-tr-modifier -int 1048576
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
-###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
-
-echo "Configuring Safari & WebKit..."
-
-# Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-# Press Tab to highlight each item on a web page
-# defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
-# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
-
-# Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-
-# Prevent Safari from opening ‘safe’ files automatically after downloading
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-
-# Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-# Add a context menu item for showing the Web Inspector in web views
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-# Show the status bar in Safari
-defaults write com.apple.Safari ShowOverlayStatusBar -bool true
-
-# Disable AutoFill
-defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-defaults write com.apple.Safari AutoFillPasswords -bool false
-defaults write com.apple.Safari AutoFillCreditCardData -bool false
-defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
-defaults write com.apple.Safari AutoFillFromiCloudKeychain -bool false
-
-# Safari Favorites page / Start Page
-defaults write com.apple.Safari ShowCloudTabsInFavorites -bool true          # iCloud tabs ✅
-defaults write com.apple.Safari ShowFrequentlyVisitedSites -bool false       # Hide suggestions ✅
-defaults write com.apple.Safari ShowHighlightsInFavorites -bool false        # Hide highlights ✅
-defaults write com.apple.Safari ShowPrivacyReportInFavorites -bool false     # Hide privacy report ✅
-defaults write com.apple.Safari ShowReadingListInFavorites -bool false       # Hide reading list ✅
-defaults write com.apple.Safari ShowRecentlyClosedTabsInFavorites -bool true # Recently closed tabs ✅
-defaults write com.apple.Safari ShowFavoritesInFavorites -bool false         # Hide favorites ✅
-
-# Warn about fraudulent websites
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
-
-# Setting up website permissions
-defaults write com.apple.Safari CanPromptForPushNotifications -bool false
-
-# Update extensions automatically
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
-
-
 #################################
 # Siri and Apple 'Intelligence' #
 #################################

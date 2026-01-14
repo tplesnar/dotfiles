@@ -110,6 +110,7 @@ mas 'Amphetamine', id: 937984704
 mas 'Dato', id: 1470584107
 mas 'Disk Speed Test', id: 425264550
 mas 'Endel', id: 1346247457
+mas 'iMazing Profile Editor', id: 1487860882
 mas 'Instapaper', id: 288545208
 mas 'iPreview', id: 1519213509
 mas 'NextDNS', id: 1464122853
