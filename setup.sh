@@ -27,8 +27,9 @@ fi
 # $HOME/.composer/vendor/bin/global-ray install
 
 # Create directories
-mkdir -p $HOME/BeepBoop
-mkdir -p $HOME/.vim/{backups,swaps,undo}
+mkdir -p "$HOME/BeepBoop"
+mkdir -p "$HOME/.vim/{backups,swaps,undo}"
+mkdir -p "$HOME/.config"
 
 # Symlinks
 ln -sf "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
