@@ -1,22 +1,28 @@
 # Binaries
+brew 'ast-grep'
 brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'curl'
+brew 'fd'
 brew 'fnm'
+brew 'fzf'
 brew 'gh'
 brew 'git'
 brew 'grep'
 brew 'httpie'
 brew 'jq' # Used for spatie/visit
+brew 'lazygit'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
 brew 'powerlevel10k'
 # brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'prettyping'
 brew 'restic'
+brew 'ripgrep'
 brew 'speedtest-cli'
 brew 'tree' # List directories in a tree structure
+brew 'wget'
 brew 'zsh-autosuggestions'
 
 # Spatie Medialibrary
