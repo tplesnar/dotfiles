@@ -120,7 +120,7 @@ fi
 
 # Remove comment on Touch ID line if present
 if grep -qE '^[[:space:]]*#[[:space:]]*auth[[:space:]]+sufficient[[:space:]]+pam_tid\.so' /etc/pam.d/sudo_local; then
-  sed -i '' 's/^[[:space:]]*#[[:space:]]*\(auth[[:space:]]*sufficient[[:space:]]*pam_tid\.so[[:space:]]*\)$/\1/' /etc/pam.d/sudo_local
+  sudo sed -i '' 's/^[[:space:]]*#[[:space:]]*\(auth[[:space:]]*sufficient[[:space:]]*pam_tid\.so[[:space:]]*\)$/\1/' /etc/pam.d/sudo_local
 fi
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
