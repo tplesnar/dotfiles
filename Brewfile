@@ -49,6 +49,7 @@ brew 'zsh-autosuggestions'
 # Note: Logitech Options+ installed via ./install-logitech-options.sh (offline version preferred)
 cask '1password'
 brew '1password-cli'
+cask 'airbuddy'
 cask 'aldente'
 cask 'appcleaner'
 cask 'brave-browser'
