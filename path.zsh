@@ -18,3 +18,6 @@ export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# cursor agent
+export PATH="$HOME/.local/bin:$PATH"
