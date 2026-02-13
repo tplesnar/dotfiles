@@ -41,3 +41,8 @@ Thumbs.db
 # Syncthing #
 #############
 .stignore
+
+# Cursor #
+##########
+.cursor/rules/thierry-*.mdc
+.cursor/skills/thierry-*/
