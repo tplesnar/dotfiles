@@ -1,5 +1,6 @@
 # Binaries
 brew 'ast-grep'
+brew 'backrest'
 brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'coreutils' # Those that come with macOS are outdated
@@ -18,6 +19,7 @@ brew 'neovim'
 brew 'powerlevel10k'
 # brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'prettyping'
+brew 'rclone'
 brew 'restic'
 brew 'ripgrep'
 brew 'speedtest-cli'

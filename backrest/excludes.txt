@@ -1,0 +1,53 @@
+# =============================================================================
+# restic/backrest exclude patterns for macOS
+# Reference in Backrest plan config: /Users/thierry/.dotfiles/backrest/excludes.txt
+# =============================================================================
+
+# macOS system junk
+.DS_Store
+.Spotlight-V100
+.fseventsd
+.Trashes
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine*
+
+# App caches & derived data
+Library/Caches
+Library/Logs
+Library/Developer/Xcode/DerivedData
+Library/Developer/CoreSimulator/Devices
+Library/Application Support/MobileSync/Backup
+Library/Application Support/CrashReporter
+
+# Large dev artifacts
+node_modules
+.gradle
+build/
+dist/
+target/
+__pycache__
+*.pyc
+.tox
+.venv
+venv/
+*.egg-info
+
+# Virtual machines & containers
+*.vmdk
+*.vmx
+*.vdi
+*.ova
+*.iso
+*.qcow2
+
+# Already-backed-up / cloud-synced folders
+Library/CloudStorage
+Library/Mobile Documents
+
+# Temp / lock files
+*.tmp
+*.temp
+*.lock
+*.pid
+.git/objects/pack
